@@ -1,0 +1,58 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("mmm.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(70%); /* Adjust the value to control the darkness */
+  z-index: -1; /* Ensure the background is behind all content */
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay with reduced opacity */
+  z-index: -1; /* Ensure the overlay is behind all content */
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Ensure the text is white */
+}
+
+/* Styling for the Book Now button */
+button {
+  background-color: #93f5e1;
+  font-size: 25px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px; /* Adjust the value to control the curve */
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
